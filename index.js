@@ -101,6 +101,8 @@ async function run() {
 
     app.get("/booking", async (req, res) => {
       const patient = req.query.patient;
+      const autherization = req.headers.authorization;
+      console.log('auth header' , autherization);
       const query = { patient: patient };
       const bookings = await bookingCollection.find(query).toArray();
       res.send(bookings);

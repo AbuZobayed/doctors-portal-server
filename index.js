@@ -124,13 +124,7 @@ async function run() {
         service.slots = available;
       });
 
-      // services.forEach(service =>{
-      //   const serviceBookings = bookings.filter(b => b.treatment === service.name);
-      //   const booked = serviceBookings.map(s => s.slot);
-      //   const available = service.slots.filter(s=>!booked.includes(s));
-      //   service.available = available;
-
-      // })
+      
 
       res.send(services);
     });
